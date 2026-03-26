@@ -51,7 +51,7 @@ const ContactPage: React.FC = () => {
               <motion.div key={info.title} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: index * 0.08 }}
                 whileHover={{ y: -3 }}
                 className="premium-card text-center p-6">
-                <info.icon className="w-5 h-5 text-primary mx-auto mb-3" />
+                <info.icon className="w-5 h-5 text-accent mx-auto mb-3" />
                 <h3 className="font-semibold text-sm mb-1">{t(info.title)}</h3>
                 {info.icon === Phone ? (
                   <a href={`tel:${t(info.content).replace(/\s/g, '')}`} className="text-muted-foreground text-xs hover:text-primary transition-colors">{t(info.content)}</a>
