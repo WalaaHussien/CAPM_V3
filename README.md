@@ -1,0 +1,148 @@
+# CapMed — Egypt's Smart Healthcare City
+
+Welcome to **CapMed**, a modern, multi-page React web application for **CAPITALMED**, Egypt's premier smart healthcare city. This project is built with **Vite**, **TypeScript**, and **Tailwind CSS**, featuring a robust tech stack designed for performance, accessibility, and user experience.
+
+🌐 **Live Site:** [https://walaahussien.github.io/-capMed/](https://walaahussien.github.io/-capMed/)
+
+## 🚀 Project Overview
+
+CapitalMed is designed to be a comprehensive digital gateway for patients, healthcare professionals, and investors. The application serves as an informational hub and service portal for the medical city, offering details on:
+
+- **Medical Services:** A wide range of specialties including Cardiology, Oncology, and more.
+- **Doctor Directory:** Find and book appointments with top specialists.
+- **Medical Tourism:** Services tailored for international patients.
+- **Campus Map:** Interactive navigation of the medical city.
+- **News & Events:** Latest updates from CapitalMed.
+
+---
+
+## 🛠️ Tech Stack
+
+This project leverages a modern frontend ecosystem:
+
+| Layer | Technology | Description |
+|---|---|---|
+| **Framework** | [React 18](https://react.dev/) + [TypeScript](https://www.typescriptlang.org/) | Type-safe component-based UI |
+| **Build Tool** | [Vite 5](https://vitejs.dev/) | Fast development and bundling |
+| **Styling** | [Tailwind CSS](https://tailwindcss.com/) | Utility-first CSS framework |
+| **UI Components** | [shadcn/ui](https://ui.shadcn.com/) | Accessible, reusable components based on Radix UI |
+| **Routing** | [React Router DOM v6](https://reactrouter.com/) | Client-side routing |
+| **State Management** | [TanStack Query](https://tanstack.com/query/latest) | Asynchronous state management |
+| **Animations** | [Framer Motion](https://www.framer.com/motion/) | Production-ready animation library |
+| **3D Graphics** | [Three.js](https://threejs.org/) + [React Three Fiber](https://docs.pmnd.rs/react-three-fiber) | Interactive 3D elements |
+| **Forms** | [React Hook Form](https://react-hook-form.com/) + [Zod](https://zod.dev/) | Form validation and schema |
+| **Localization** | Custom Context | Multi-language support (English & Arabic) |
+
+---
+
+## ✨ Key Features
+
+- 🌍 **Bilingual Support:** Full Arabic & English localization via `LanguageContext` with RTL support.
+- 🗺️ **Interactive Campus Map:** 3D visualization of the medical city.
+- 🤖 **AI Chatbot:** Intelligent assistant for quick user queries.
+- 📱 **Responsive Design:** Optimized for mobile, tablet, and desktop.
+- ♿ **Accessibility:** Built with ARIA standards using Radix UI primitives.
+- 🎨 **Modern UI/UX:** Smooth transitions and professional aesthetics using Framer Motion.
+
+---
+
+## 📂 Project Structure
+
+```
+capmed/
+├── public/                     # Static assets (favicons, robots.txt)
+├── src/
+│   ├── assets/                 # Images, fonts, and media
+│   ├── components/             # Reusable UI components
+│   │   ├── ui/                 # shadcn/ui primitives (Button, Card, etc.)
+│   │   ├── header/             # Navigation & Header components
+│   │   ├── Footer.tsx          # Site footer
+│   │   ├── Hero.tsx            # Homepage hero section
+│   │   └── ...                 # Other shared components
+│   ├── contexts/
+│   │   ├── LanguageContext.tsx # i18n logic & state
+│   │   ├── CMSContext.tsx      # Content management state
+│   ├── hooks/                  # Custom React hooks
+│   ├── lib/                    # Utility functions (cn, formatters)
+│   ├── pages/                  # Route-level page components
+│   │   ├── Index.tsx           # Homepage
+│   │   ├── DoctorsPage.tsx     # Doctor search & directory
+│   │   ├── LocationPage.tsx    # Maps & Directions
+│   │   └── ...                 # Other pages
+│   ├── App.tsx                 # Root component & Routing configuration
+│   └── main.tsx                # Entry point
+├── index.html                  # HTML template
+├── package.json                # Dependencies & scripts
+├── tailwind.config.ts          # Tailwind configuration
+└── vite.config.ts              # Vite configuration
+```
+
+---
+
+## 💻 Getting Started
+
+### Prerequisites
+
+- **Node.js**: v18 or higher
+- **npm**: v9 or higher
+
+### Installation
+
+1.  **Clone the repository:**
+    ```bash
+    git clone https://github.com/WalaaHussien/-capMed.git
+    cd -capMed
+    ```
+
+2.  **Install dependencies:**
+    ```bash
+    npm install
+    ```
+
+3.  **Start the development server:**
+    ```bash
+    npm run dev
+    ```
+    The application will be available at `http://localhost:5173`.
+
+---
+
+## 📜 Scripts
+
+| Script | Description |
+|---|---|
+| `npm run dev` | Starts the development server with HMR. |
+| `npm run build` | Builds the app for production to the `dist` folder. |
+| `npm run preview` | Locally preview the production build. |
+| `npm run lint` | Runs ESLint to check for code quality issues. |
+| `npm test` | Runs unit tests using Vitest. |
+
+---
+
+## 🌐 Deployment
+
+This project is configured for deployment via **GitHub Pages**.
+
+1.  **Build the project:**
+    The `deploy.yml` workflow in `.github/workflows/` automatically builds and deploys the site on every push to the `main` branch.
+
+2.  **Manual Deployment (Optional):**
+    You can also build locally and deploy the `dist` folder using `gh-pages` or any static hosting service (Vercel, Netlify).
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+1.  Fork the project
+2.  Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3.  Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4.  Push to the branch (`git push origin feature/AmazingFeature`)
+5.  Open a Pull Request
+
+---
+
+## 📄 License
+
+This project is proprietary software of **CapitalMed**.
