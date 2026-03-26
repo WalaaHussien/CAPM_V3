@@ -20,7 +20,7 @@ const Index: React.FC = () => {
       <Header />
       <main>
         <Hero />
-        <QuickActions />
+        
         <Pillars />
         <Stats />
         <Services />

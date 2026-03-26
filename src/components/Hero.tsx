@@ -53,8 +53,8 @@ const Hero: React.FC = () => {
             transition={{ duration: 1.5, ease: 'easeInOut' }}
           />
         ))}
-        <div className="absolute inset-0 bg-gradient-to-r from-[hsl(200,90%,8%)]/90 via-[hsl(200,85%,10%)]/75 to-[hsl(200,80%,12%)]/50" />
-        <div className="absolute inset-0 bg-gradient-to-t from-[hsl(200,85%,8%)]/60 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[hsl(200,90%,8%)]/60 via-[hsl(200,85%,10%)]/40 to-[hsl(200,80%,12%)]/20" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[hsl(200,85%,8%)]/30 to-transparent" />
       </div>
 
       {/* Content */}

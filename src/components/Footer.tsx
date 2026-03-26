@@ -127,10 +127,11 @@ const Footer: React.FC = () => {
               })}
             </ul>
           </div>
-        </div>
       </div>
+    </div>
 
       {/* Bottom Bar */}
+
       <div className="relative border-t border-white/10">
         <div className="container mx-auto px-6 py-5">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
