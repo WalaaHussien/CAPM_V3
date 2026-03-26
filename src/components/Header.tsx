@@ -3,7 +3,8 @@ import { motion } from 'framer-motion';
 import { Menu, ChevronDown, Globe, Phone } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 import { useLanguage } from '@/contexts/LanguageContext';
-import logo from '@/assets/logo.svg';
+import darkLogo from '@/assets/logo.svg';
+import lightLogo from '@/assets/light_logo.svg';
 import { Button } from '@/components/ui/button';
 import {
   DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger,
@@ -93,12 +94,12 @@ const Header: React.FC = () => {
       {/* Main Navigation */}
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-16 md:h-18">
-          {/* Logo - fixed, no change on scroll */}
+          {/* Logo - swaps between light/dark based on scroll */}
           <Link to="/" className="flex items-center">
             <img
-              src={logo}
+              src={isScrolled ? darkLogo : lightLogo}
               alt="CapitalMed"
-              className="h-10 md:h-12 w-auto object-contain"
+              className="h-12 md:h-14 w-auto object-contain transition-all duration-500"
             />
           </Link>
 
