@@ -95,8 +95,8 @@ const AboutPage: React.FC = () => {
             {values.map((value) => (
               <motion.div key={value.key} variants={fadeUp} whileHover={{ y: -3 }}
                 className="premium-card text-center p-6">
-                <div className="w-12 h-12 rounded-full bg-primary/8 flex items-center justify-center mx-auto mb-4">
-                  <value.icon className="w-6 h-6 text-primary" />
+                <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center mx-auto mb-4">
+                  <value.icon className="w-6 h-6 text-accent" />
                 </div>
                 <h3 className="font-semibold">{t(value.key)}</h3>
               </motion.div>
