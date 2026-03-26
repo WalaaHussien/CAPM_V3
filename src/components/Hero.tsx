@@ -58,13 +58,13 @@ const Hero: React.FC = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 sm:px-6 pb-28 sm:pb-24 md:pb-0">
+      <div className="relative z-10 container mx-auto px-5 sm:px-6 pb-20 md:pb-0">
         <div className="max-w-2xl">
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6 }}
-            className="text-secondary text-xs sm:text-sm font-semibold uppercase tracking-[0.2em] mb-2 sm:mb-4"
+            className="text-secondary text-xs sm:text-sm font-semibold uppercase tracking-[0.2em] mb-3 sm:mb-4"
           >
             {t('hero.smartCity')}
           </motion.p>
@@ -73,7 +73,7 @@ const Hero: React.FC = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.7, delay: 0.1 }}
-            className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-2 sm:mb-4 tracking-tight leading-[1.1] drop-shadow-[0_2px_10px_rgba(0,0,0,0.5)]"
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-3 sm:mb-4 tracking-tight leading-[1.1] drop-shadow-[0_2px_10px_rgba(0,0,0,0.5)]"
           >
             {t('hero.title')}
           </motion.h1>
@@ -82,7 +82,7 @@ const Hero: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.7, delay: 0.2 }}
-            className="text-base sm:text-xl md:text-2xl text-white/90 mb-2 sm:mb-4 font-light drop-shadow-[0_1px_6px_rgba(0,0,0,0.4)]"
+            className="text-lg sm:text-xl md:text-2xl text-white/90 mb-3 sm:mb-4 font-light drop-shadow-[0_1px_6px_rgba(0,0,0,0.4)]"
           >
             {t('hero.tagline')}
           </motion.p>
@@ -91,7 +91,7 @@ const Hero: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.7, delay: 0.3 }}
-            className="text-sm sm:text-base text-white/70 mb-4 sm:mb-8 max-w-lg leading-relaxed drop-shadow-[0_1px_4px_rgba(0,0,0,0.3)] hidden sm:block"
+            className="text-sm sm:text-base text-white/70 mb-6 sm:mb-8 max-w-lg leading-relaxed drop-shadow-[0_1px_4px_rgba(0,0,0,0.3)]"
           >
             {t('hero.description')}
           </motion.p>
@@ -120,7 +120,7 @@ const Hero: React.FC = () => {
             initial={{ opacity: 0 }}
             animate={isInView ? { opacity: 1 } : {}}
             transition={{ duration: 0.8, delay: 0.6 }}
-            className="flex flex-wrap gap-4 sm:gap-8 mt-6 sm:mt-12 pt-4 sm:pt-8 border-t border-white/10"
+            className="flex flex-wrap gap-5 sm:gap-8 mt-8 sm:mt-12 pt-6 sm:pt-8 border-t border-white/10"
           >
             {[
               { value: '577K m²', label: 'Campus Area' },
@@ -134,8 +134,8 @@ const Hero: React.FC = () => {
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.5, delay: 0.7 + i * 0.1 }}
               >
-                <p className="text-white font-bold text-sm sm:text-lg drop-shadow-[0_1px_4px_rgba(0,0,0,0.3)]">{stat.value}</p>
-                <p className="text-white/60 text-[10px] sm:text-xs uppercase tracking-wider">{stat.label}</p>
+                <p className="text-white font-bold text-base sm:text-lg drop-shadow-[0_1px_4px_rgba(0,0,0,0.3)]">{stat.value}</p>
+                <p className="text-white/60 text-xs uppercase tracking-wider">{stat.label}</p>
               </motion.div>
             ))}
           </motion.div>
