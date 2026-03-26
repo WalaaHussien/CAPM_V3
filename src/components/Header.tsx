@@ -3,7 +3,8 @@ import { motion } from 'framer-motion';
 import { Menu, ChevronDown, Globe, Phone } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 import { useLanguage } from '@/contexts/LanguageContext';
-import logo from '@/assets/logo.svg';
+import darkLogo from '@/assets/logo.svg';
+import lightLogo from '@/assets/light_logo.svg';
 import { Button } from '@/components/ui/button';
 import {
   DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger,
