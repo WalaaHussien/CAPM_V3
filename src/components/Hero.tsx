@@ -82,7 +82,7 @@ const Hero: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.7, delay: 0.2 }}
-            className="text-xl md:text-2xl text-white/90 mb-4 font-light drop-shadow-[0_1px_6px_rgba(0,0,0,0.4)]"
+            className="text-base sm:text-xl md:text-2xl text-white/90 mb-2 sm:mb-4 font-light drop-shadow-[0_1px_6px_rgba(0,0,0,0.4)]"
           >
             {t('hero.tagline')}
           </motion.p>
