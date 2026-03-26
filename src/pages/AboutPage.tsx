@@ -116,7 +116,7 @@ const AboutPage: React.FC = () => {
               <motion.div key={milestone.year} initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ delay: index * 0.1 }}
                 className="flex gap-5">
                 <div className="flex flex-col items-center">
-                  <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-primary-foreground text-xs font-bold">
+                  <div className="w-10 h-10 bg-accent rounded-full flex items-center justify-center text-accent-foreground text-xs font-bold">
                     {milestone.year.slice(-2)}
                   </div>
                   {index < milestones.length - 1 && <div className="w-px flex-1 bg-border mt-2" />}
