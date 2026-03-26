@@ -134,8 +134,8 @@ const Hero: React.FC = () => {
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.5, delay: 0.7 + i * 0.1 }}
               >
-                <p className="text-white font-bold text-lg drop-shadow-[0_1px_4px_rgba(0,0,0,0.3)]">{stat.value}</p>
-                <p className="text-white/60 text-xs uppercase tracking-wider">{stat.label}</p>
+                <p className="text-white font-bold text-sm sm:text-lg drop-shadow-[0_1px_4px_rgba(0,0,0,0.3)]">{stat.value}</p>
+                <p className="text-white/60 text-[10px] sm:text-xs uppercase tracking-wider">{stat.label}</p>
               </motion.div>
             ))}
           </motion.div>
