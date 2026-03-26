@@ -72,7 +72,7 @@ const ContactPage: React.FC = () => {
           <div className="grid lg:grid-cols-2 gap-12">
             <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
               <div className="flex items-center gap-3 mb-6">
-                <MessageSquare className="w-6 h-6 text-primary" />
+                <MessageSquare className="w-6 h-6 text-accent" />
                 <h2 className="text-xl font-bold">{t('contact.form.title')}</h2>
               </div>
               <form onSubmit={handleSubmit} className="space-y-5">
