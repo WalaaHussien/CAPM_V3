@@ -93,10 +93,9 @@ const Header: React.FC = () => {
 
       {/* Main Navigation */}
       <div className="container mx-auto px-6">
-        <div className="flex items-center justify-between h-20 md:h-24">
+        <div className="flex items-center justify-between h-14 sm:h-18 md:h-24">
           {/* Logo - swaps between light/dark based on scroll */}
-          <Link to="/" className="flex items-center relative h-16 md:h-20">
-            {/* Light logo sets the width, dark overlays on top */}
+          <Link to="/" className="flex items-center relative h-10 sm:h-14 md:h-20">
             <img
               src={lightLogo}
               alt="CapitalMed"

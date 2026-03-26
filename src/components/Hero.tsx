@@ -36,7 +36,7 @@ const Hero: React.FC = () => {
     <section
       id="home"
       ref={containerRef}
-      className="relative h-screen min-h-[600px] max-h-[900px] flex items-center overflow-hidden"
+      className="relative h-screen min-h-[500px] max-h-[900px] flex items-center overflow-hidden"
     >
       {/* Background - smooth crossfade with blur */}
       <div className="absolute inset-0">
@@ -58,13 +58,13 @@ const Hero: React.FC = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-6 pb-24 md:pb-0">
+      <div className="relative z-10 container mx-auto px-4 sm:px-6 pb-28 sm:pb-24 md:pb-0">
         <div className="max-w-2xl">
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6 }}
-            className="text-secondary text-sm font-semibold uppercase tracking-[0.2em] mb-4"
+            className="text-secondary text-xs sm:text-sm font-semibold uppercase tracking-[0.2em] mb-2 sm:mb-4"
           >
             {t('hero.smartCity')}
           </motion.p>
@@ -73,7 +73,7 @@ const Hero: React.FC = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.7, delay: 0.1 }}
-            className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-4 tracking-tight leading-[1.1] drop-shadow-[0_2px_10px_rgba(0,0,0,0.5)]"
+            className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-2 sm:mb-4 tracking-tight leading-[1.1] drop-shadow-[0_2px_10px_rgba(0,0,0,0.5)]"
           >
             {t('hero.title')}
           </motion.h1>
@@ -82,7 +82,7 @@ const Hero: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.7, delay: 0.2 }}
-            className="text-xl md:text-2xl text-white/90 mb-4 font-light drop-shadow-[0_1px_6px_rgba(0,0,0,0.4)]"
+            className="text-base sm:text-xl md:text-2xl text-white/90 mb-2 sm:mb-4 font-light drop-shadow-[0_1px_6px_rgba(0,0,0,0.4)]"
           >
             {t('hero.tagline')}
           </motion.p>
@@ -91,7 +91,7 @@ const Hero: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.7, delay: 0.3 }}
-            className="text-base text-white/70 mb-8 max-w-lg leading-relaxed drop-shadow-[0_1px_4px_rgba(0,0,0,0.3)]"
+            className="text-sm sm:text-base text-white/70 mb-4 sm:mb-8 max-w-lg leading-relaxed drop-shadow-[0_1px_4px_rgba(0,0,0,0.3)] hidden sm:block"
           >
             {t('hero.description')}
           </motion.p>
@@ -120,7 +120,7 @@ const Hero: React.FC = () => {
             initial={{ opacity: 0 }}
             animate={isInView ? { opacity: 1 } : {}}
             transition={{ duration: 0.8, delay: 0.6 }}
-            className="flex flex-wrap gap-8 mt-12 pt-8 border-t border-white/10"
+            className="flex flex-wrap gap-4 sm:gap-8 mt-6 sm:mt-12 pt-4 sm:pt-8 border-t border-white/10"
           >
             {[
               { value: '577K m²', label: 'Campus Area' },
@@ -134,8 +134,8 @@ const Hero: React.FC = () => {
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.5, delay: 0.7 + i * 0.1 }}
               >
-                <p className="text-white font-bold text-lg drop-shadow-[0_1px_4px_rgba(0,0,0,0.3)]">{stat.value}</p>
-                <p className="text-white/60 text-xs uppercase tracking-wider">{stat.label}</p>
+                <p className="text-white font-bold text-sm sm:text-lg drop-shadow-[0_1px_4px_rgba(0,0,0,0.3)]">{stat.value}</p>
+                <p className="text-white/60 text-[10px] sm:text-xs uppercase tracking-wider">{stat.label}</p>
               </motion.div>
             ))}
           </motion.div>
@@ -143,8 +143,8 @@ const Hero: React.FC = () => {
       </div>
 
       {/* Slide Navigation */}
-      <div className="absolute bottom-8 md:bottom-8 left-0 right-0 flex items-center justify-center gap-3 z-20 px-6 pointer-events-none pb-8">
-        <button onClick={prevSlide} className="pointer-events-auto w-12 h-12 rounded-full border-2 border-white/30 flex items-center justify-center text-white/80 hover:text-white hover:border-white/60 hover:bg-white/10 transition-all cursor-pointer active:scale-95 shrink-0">
+      <div className="absolute bottom-4 sm:bottom-8 left-0 right-0 flex items-center justify-center gap-2 sm:gap-3 z-20 px-4 sm:px-6 pointer-events-none pb-2 sm:pb-8">
+        <button onClick={prevSlide} className="pointer-events-auto w-9 h-9 sm:w-12 sm:h-12 rounded-full border-2 border-white/30 flex items-center justify-center text-white/80 hover:text-white hover:border-white/60 hover:bg-white/10 transition-all cursor-pointer active:scale-95 shrink-0">
           {isRTL ? <ChevronRight className="w-5 h-5" /> : <ChevronLeft className="w-5 h-5" />}
         </button>
         <div className="pointer-events-auto flex gap-2">
@@ -157,7 +157,7 @@ const Hero: React.FC = () => {
             />
           ))}
         </div>
-        <button onClick={nextSlide} className="pointer-events-auto w-12 h-12 rounded-full border-2 border-white/30 flex items-center justify-center text-white/80 hover:text-white hover:border-white/60 hover:bg-white/10 transition-all cursor-pointer active:scale-95 shrink-0">
+        <button onClick={nextSlide} className="pointer-events-auto w-9 h-9 sm:w-12 sm:h-12 rounded-full border-2 border-white/30 flex items-center justify-center text-white/80 hover:text-white hover:border-white/60 hover:bg-white/10 transition-all cursor-pointer active:scale-95 shrink-0">
           {isRTL ? <ChevronLeft className="w-5 h-5" /> : <ChevronRight className="w-5 h-5" />}
         </button>
       </div>
