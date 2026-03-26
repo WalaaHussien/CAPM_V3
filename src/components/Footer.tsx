@@ -53,7 +53,7 @@ const Footer: React.FC = () => {
                   <a
                     key={index}
                     href={social.href}
-                    className="w-9 h-9 rounded-full border border-white/15 flex items-center justify-center text-white/50 hover:text-white hover:border-white/40 transition-colors"
+                    className="w-9 h-9 rounded-full border border-white/20 flex items-center justify-center text-white/70 hover:text-white hover:border-white/50 transition-colors"
                   >
                     <Icon className="w-4 h-4" />
                   </a>
