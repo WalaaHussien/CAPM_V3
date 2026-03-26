@@ -72,7 +72,7 @@ const Pillars: React.FC = () => {
                       {t(pillar.descKey)}
                     </p>
 
-                    <div className="flex items-center gap-2 text-primary text-sm font-medium group-hover:gap-3 transition-all duration-300">
+                    <div className="flex items-center gap-2 text-accent text-sm font-medium group-hover:gap-3 transition-all duration-300">
                       <span>{t('hero.cta.learn')}</span>
                       <ArrowRight className={`w-4 h-4 ${isRTL ? 'rotate-180' : ''}`} />
                     </div>

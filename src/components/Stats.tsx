@@ -85,8 +85,8 @@ const Stats: React.FC = () => {
                 whileHover={{ scale: 1.05, y: -4 }}
                 className="text-center group"
               >
-                <div className="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center mx-auto mb-3 group-hover:bg-secondary/20 transition-colors duration-300">
-                  <Icon className="w-5 h-5 text-secondary" />
+                <div className="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center mx-auto mb-3 group-hover:bg-accent/20 transition-colors duration-300">
+                  <Icon className="w-5 h-5 text-accent" />
                 </div>
                 <div className="text-3xl md:text-4xl font-bold text-white mb-1 drop-shadow-[0_1px_3px_rgba(0,0,0,0.3)]">
                   <AnimatedCounter

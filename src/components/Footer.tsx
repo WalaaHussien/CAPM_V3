@@ -114,7 +114,7 @@ const Footer: React.FC = () => {
                 const isEmail = item.icon === Mail;
                 return (
                   <li key={index} className="flex items-start gap-3">
-                    <Icon className="w-4 h-4 text-white/60 mt-0.5 flex-shrink-0" />
+                    <Icon className="w-4 h-4 text-accent/80 mt-0.5 flex-shrink-0" />
                     {isPhone ? (
                       <a href={`tel:${item.text.replace(/\s/g, '')}`} className="text-white/80 text-sm hover:text-white transition-colors">{item.text}</a>
                     ) : isEmail ? (

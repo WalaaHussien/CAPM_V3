@@ -59,7 +59,7 @@ const Services: React.FC = () => {
                   {t(`services.${service.key}.desc`)}
                 </p>
 
-                <div className="flex items-center gap-2 text-primary text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="flex items-center gap-2 text-accent text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <span>{t('hero.cta.learn')}</span>
                   <ArrowRight className={`w-4 h-4 ${isRTL ? 'rotate-180' : ''}`} />
                 </div>
