@@ -75,7 +75,7 @@ const Footer: React.FC = () => {
                 { label: t('nav.contact'), href: '/contact' },
               ].map((link, index) => (
                 <li key={index}>
-                  <Link to={link.href} className="text-white/60 hover:text-white text-sm transition-colors">
+                  <Link to={link.href} className="text-white/80 hover:text-white text-sm transition-colors">
                     {link.label}
                   </Link>
                 </li>
@@ -96,7 +96,7 @@ const Footer: React.FC = () => {
                 { label: t('services.pediatrics.title'), href: '/services' },
               ].map((service, index) => (
                 <li key={index}>
-                  <Link to={service.href} className="text-white/60 hover:text-white text-sm transition-colors">
+                  <Link to={service.href} className="text-white/80 hover:text-white text-sm transition-colors">
                     {service.label}
                   </Link>
                 </li>
@@ -116,11 +116,11 @@ const Footer: React.FC = () => {
                   <li key={index} className="flex items-start gap-3">
                     <Icon className="w-4 h-4 text-white/60 mt-0.5 flex-shrink-0" />
                     {isPhone ? (
-                      <a href={`tel:${item.text.replace(/\s/g, '')}`} className="text-white/60 text-sm hover:text-white transition-colors">{item.text}</a>
+                      <a href={`tel:${item.text.replace(/\s/g, '')}`} className="text-white/80 text-sm hover:text-white transition-colors">{item.text}</a>
                     ) : isEmail ? (
-                      <a href={`mailto:${item.text}`} className="text-white/60 text-sm hover:text-white transition-colors">{item.text}</a>
+                      <a href={`mailto:${item.text}`} className="text-white/80 text-sm hover:text-white transition-colors">{item.text}</a>
                     ) : (
-                      <span className="text-white/60 text-sm">{item.text}</span>
+                      <span className="text-white/80 text-sm">{item.text}</span>
                     )}
                   </li>
                 );
