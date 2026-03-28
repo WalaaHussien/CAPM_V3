@@ -641,10 +641,10 @@ const translations: Record<Language, Record<string, string>> = {
     'about.corporate.cira': 'CIRA',
     'about.corporate.cira.desc': 'Cairo for Investment and Real Estate Development S.A.E.',
 
-    // Facilities - 19 Institutes
-    'facilities.institutes.label': '19 Integrated Facilities',
+    // Facilities - 26 Services Mix
+    'facilities.institutes.label': '26 Integrated Facilities',
     'facilities.institutes.title': 'CAPITALMED Services Mix',
-    'facilities.institutes.subtitle': 'A comprehensive ecosystem of 19 fully integrated facilities, each catering to specific needs',
+    'facilities.institutes.subtitle': 'A comprehensive ecosystem of 26 fully integrated facilities, each catering to specific needs',
     'facilities.inst.universityHospital': 'University Hospital Center',
     'facilities.inst.universityHospital.desc': 'The flagship hospital with 4,000+ beds and full-spectrum medical services.',
     'facilities.inst.doctorsPlaza': "Doctors' Plaza",
@@ -683,6 +683,20 @@ const translations: Record<Language, Record<string, string>> = {
     'facilities.inst.longTermCare.desc': 'Extended care programs for chronic conditions.',
     'facilities.inst.advancedNursing': 'Advanced Nursing Care Institute',
     'facilities.inst.advancedNursing.desc': 'Specialized nursing services and training programs.',
+    'facilities.inst.neuroSpine': 'Neuro and Spine Institute',
+    'facilities.inst.neuroSpine.desc': 'Comprehensive neurological and spinal care, surgery, and rehabilitation.',
+    'facilities.inst.hrDevelopment': 'Human Resources Development Institute',
+    'facilities.inst.hrDevelopment.desc': 'Training, education, and professional development for healthcare workforce.',
+    'facilities.inst.centralCommand': 'Central Command Building',
+    'facilities.inst.centralCommand.desc': 'Integrated operations center managing campus-wide systems and logistics.',
+    'facilities.inst.hotelResidential': 'Hotel & Residential Area',
+    'facilities.inst.hotelResidential.desc': 'Premium hospitality and residential accommodation for patients and families.',
+    'facilities.inst.shoppingMall': 'Shopping Mall',
+    'facilities.inst.shoppingMall.desc': 'Retail, dining, and lifestyle amenities for patients, visitors, and staff.',
+    'facilities.inst.utilityBuildings': 'Two Central Utility Buildings',
+    'facilities.inst.utilityBuildings.desc': 'Core infrastructure supporting power, water, and mechanical systems.',
+    'facilities.inst.futureExpansion': 'Buildings for Future Expansion',
+    'facilities.inst.futureExpansion.desc': 'Reserved space for future medical and commercial development.',
   },
   ar: {
     // Navigation
@@ -1315,10 +1329,10 @@ const translations: Record<Language, Record<string, string>> = {
     'about.corporate.cira': 'سيرا',
     'about.corporate.cira.desc': 'القاهرة للاستثمار والتطوير العقاري ش.م.م.',
 
-    // Facilities - 19 Institutes
-    'facilities.institutes.label': '١٩ مرفقاً متكاملاً',
+    // Facilities - 26 Services Mix
+    'facilities.institutes.label': '٢٦ مرفقاً متكاملاً',
     'facilities.institutes.title': 'مزيج خدمات كابيتال ميد',
-    'facilities.institutes.subtitle': 'نظام بيئي شامل من ١٩ مرفقاً متكاملاً، كل منها يلبي احتياجات محددة',
+    'facilities.institutes.subtitle': 'نظام بيئي شامل من ٢٦ مرفقاً متكاملاً، كل منها يلبي احتياجات محددة',
     'facilities.inst.universityHospital': 'مركز المستشفى الجامعي',
     'facilities.inst.universityHospital.desc': 'المستشفى الرئيسي بأكثر من ٤٠٠٠ سرير وخدمات طبية شاملة.',
     'facilities.inst.doctorsPlaza': 'بلازا الأطباء',
@@ -1357,6 +1371,20 @@ const translations: Record<Language, Record<string, string>> = {
     'facilities.inst.longTermCare.desc': 'برامج رعاية ممتدة للحالات المزمنة.',
     'facilities.inst.advancedNursing': 'معهد التمريض المتقدم',
     'facilities.inst.advancedNursing.desc': 'خدمات تمريض متخصصة وبرامج تدريب.',
+    'facilities.inst.neuroSpine': 'معهد الأعصاب والعمود الفقري',
+    'facilities.inst.neuroSpine.desc': 'رعاية شاملة للأعصاب والعمود الفقري والجراحة والتأهيل.',
+    'facilities.inst.hrDevelopment': 'معهد تنمية الموارد البشرية',
+    'facilities.inst.hrDevelopment.desc': 'التدريب والتعليم والتطوير المهني للقوى العاملة الصحية.',
+    'facilities.inst.centralCommand': 'مبنى القيادة المركزي',
+    'facilities.inst.centralCommand.desc': 'مركز عمليات متكامل يدير أنظمة ولوجستيات الحرم بالكامل.',
+    'facilities.inst.hotelResidential': 'الفندق والمنطقة السكنية',
+    'facilities.inst.hotelResidential.desc': 'إقامة فندقية وسكنية متميزة للمرضى وعائلاتهم.',
+    'facilities.inst.shoppingMall': 'المركز التجاري',
+    'facilities.inst.shoppingMall.desc': 'مرافق تسوق وطعام وأسلوب حياة للمرضى والزوار والموظفين.',
+    'facilities.inst.utilityBuildings': 'مبنيان للخدمات المركزية',
+    'facilities.inst.utilityBuildings.desc': 'البنية التحتية الأساسية لدعم أنظمة الطاقة والمياه والميكانيكا.',
+    'facilities.inst.futureExpansion': 'مباني للتوسع المستقبلي',
+    'facilities.inst.futureExpansion.desc': 'مساحات محجوزة للتطوير الطبي والتجاري المستقبلي.',
   },
 };
 
