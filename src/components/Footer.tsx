@@ -21,6 +21,7 @@ const Footer: React.FC = () => {
     t('nav.medicalTourism'),
     t('nav.research'),
     t('nav.contact'),
+    t('nav.patientPortal'),
   ];
 
   const socialLinks = [
