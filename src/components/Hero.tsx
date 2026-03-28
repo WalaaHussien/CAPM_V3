@@ -60,6 +60,18 @@ const Hero: React.FC = () => {
       {/* Content */}
       <div className="relative z-10 container mx-auto px-5 sm:px-6 pb-20 md:pb-0">
         <div className="max-w-2xl">
+          {/* La Plaza Hospital Badge */}
+          <motion.div
+            initial={{ opacity: 0, y: 15 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.5 }}
+            className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-1.5 mb-4"
+          >
+            <span className="text-accent text-xs font-bold tracking-wider uppercase">{t('hero.laPlaza')}</span>
+            <span className="text-white/40">|</span>
+            <span className="text-white/70 text-xs">{t('hero.laPlaza.tagline')}</span>
+          </motion.div>
+
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
