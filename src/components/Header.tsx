@@ -96,12 +96,8 @@ const Header: React.FC = () => {
             <img
               src={lightLogo}
               alt="CapitalMed"
-              className={`h-full w-auto object-contain transition-opacity duration-500 ${isScrolled ? 'opacity-0' : 'opacity-100'}`}
+              className="h-full w-auto object-contain"
             />
-            <img
-              src={darkLogo}
-              alt="CapitalMed"
-              className={`h-full w-auto object-contain absolute left-0 top-0 transition-opacity duration-500 ${isScrolled ? 'opacity-100' : 'opacity-0'}`}
             />
           </Link>
 
