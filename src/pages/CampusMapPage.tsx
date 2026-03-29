@@ -548,7 +548,7 @@ const CampusMapPage: React.FC = () => {
   const totalProgress = totalSegments > 0 ? (currentSegment + segmentProgress) / totalSegments : 0;
 
   return (
-    <div className="min-h-screen bg-background overflow-x-hidden">
+    <div className="min-h-screen bg-background overflow-hidden">
       <Header />
       <div className="relative h-screen pt-16">
         {/* ─── 3D Canvas ─── */}
