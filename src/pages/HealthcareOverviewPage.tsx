@@ -202,7 +202,7 @@ const HealthcareOverviewPage: React.FC = () => {
         </motion.div>
 
         {/* Patient Aspirations */}
-        <div className="grid lg:grid-cols-2 gap-10 mb-16">
+        <div className="grid lg:grid-cols-2 gap-10 mb-20">
           <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
             <h3 className="font-semibold text-base mb-4 flex items-center gap-2"><Users className="w-5 h-5 text-accent" /> {t('healthcare.aspirations.title')}</h3>
             <ul className="space-y-2">
@@ -256,7 +256,7 @@ const HealthcareOverviewPage: React.FC = () => {
           <p className="section-subtitle">{t('healthcare.charts.subtitle')}</p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-8 mb-16">
+        <div className="grid md:grid-cols-2 gap-10 mb-20">
           {/* Chart 1: Common Problems */}
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="premium-card p-6">
             <h4 className="font-semibold text-sm mb-4 text-center">{t('healthcare.chart.problems')}</h4>
@@ -356,7 +356,7 @@ const HealthcareOverviewPage: React.FC = () => {
         </div>
 
         {/* Overseas Care & Top Hospitals */}
-        <div className="grid md:grid-cols-2 gap-8 mb-16">
+        <div className="grid md:grid-cols-2 gap-10 mb-20">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="premium-card p-6">
             <h4 className="font-semibold text-sm mb-4 text-center">{t('healthcare.chart.overseas')}</h4>
             <ResponsiveContainer width="100%" height={250}>
