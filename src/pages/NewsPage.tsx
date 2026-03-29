@@ -77,7 +77,12 @@ const NewsPage: React.FC = () => {
       },
     ];
 
-  const filtered = activeCategory === 'All' ? articles : articles.filter(a => a.category === activeCategory);
+  const filtered = articles.filter(a => {
+    const matchesCategory = activeCategory === 'All' || a.category === activeCategory;
+    const query = searchQuery.toLowerCase();
+    const matchesSearch = !query || a.title.toLowerCase().includes(query) || a.excerpt.toLowerCase().includes(query) || a.author.toLowerCase().includes(query);
+    return matchesCategory && matchesSearch;
+  });
 
   return (
     <PageLayout>
