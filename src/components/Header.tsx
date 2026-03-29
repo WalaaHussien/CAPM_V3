@@ -55,7 +55,7 @@ const Header: React.FC = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5, ease: 'easeOut' }}
-      className={`sticky top-[var(--quick-access-height)] z-50 w-full transition-all duration-500 ${
+      className={`sticky top-0 z-[70] w-full transition-all duration-500 ${
         isScrolled
           ? 'bg-primary-dark backdrop-blur-lg shadow-sm border-b border-border/50'
           : 'bg-primary-dark/95 backdrop-blur-sm'
