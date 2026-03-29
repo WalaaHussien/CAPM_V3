@@ -63,7 +63,7 @@ const Header: React.FC = () => {
       <div className="hidden md:block border-b border-white/10">
         <div className="container mx-auto px-6">
           <div className="flex items-center justify-between h-9 text-xs">
-            <div className={`flex items-center gap-4 ${isScrolled ? 'text-muted-foreground' : 'text-white/70'}`}>
+            <div className="flex items-center gap-4 text-white/70">
               <a href="tel:+201234567890" className="flex items-center gap-1.5 hover:text-accent transition-colors">
                 <Phone className="w-3 h-3" />
                 <span>+20 2 1234 5678</span>
