@@ -15,15 +15,11 @@ const PageLayout: React.FC<PageLayoutProps> = ({ children, showFooter = true }) 
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
-      className="min-h-screen overflow-visible bg-background"
+      className="min-h-screen overflow-visible bg-background isolate"
       style={{ '--quick-access-height': '3rem' } as React.CSSProperties}
     >
-      <div className="sticky top-0 z-[60]">
-        <QuickAccessBar />
-      </div>
-      <div className="sticky top-[var(--quick-access-height)] z-50">
-        <Header />
-      </div>
+      <QuickAccessBar />
+      <Header />
       <main className="relative z-0">{children}</main>
       {showFooter && <Footer />}
     </motion.div>
