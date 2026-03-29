@@ -12,6 +12,7 @@ import {
 import MegaMenu from '@/components/header/MegaMenu';
 import MobileNav from '@/components/header/MobileNav';
 import SearchBar from '@/components/SearchBar';
+import QuickAccessBar from '@/components/QuickAccessBar';
 
 const Header: React.FC = () => {
   const { language, setLanguage, t, isRTL } = useLanguage();
