@@ -168,7 +168,7 @@ const PatientPortalPage: React.FC = () => {
                 <h1 className="text-2xl md:text-3xl font-bold text-white mb-1">{patient.name}</h1>
                 <p className="text-white/50 text-xs mt-2">{t('portal.patientId')}: {patient.patient_id}</p>
               </div>
-              <Button variant="outline" onClick={handleLogout} className="border-white/20 text-white hover:bg-white/10">
+              <Button onClick={handleLogout} className="bg-destructive hover:bg-destructive/90 text-destructive-foreground">
                 <LogOut className="w-4 h-4 mr-2" /> {t('portal.logout')}
               </Button>
             </div>

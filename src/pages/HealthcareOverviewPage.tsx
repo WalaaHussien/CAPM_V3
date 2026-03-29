@@ -256,7 +256,7 @@ const HealthcareOverviewPage: React.FC = () => {
           <p className="section-subtitle">{t('healthcare.charts.subtitle')}</p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-8 mb-16">
+        <div className="grid md:grid-cols-2 gap-10 mb-20">
           {/* Chart 1: Common Problems */}
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="premium-card p-6">
             <h4 className="font-semibold text-sm mb-4 text-center">{t('healthcare.chart.problems')}</h4>

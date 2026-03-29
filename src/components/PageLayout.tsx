@@ -21,7 +21,7 @@ const PageLayout: React.FC<PageLayoutProps> = ({ children, showFooter = true }) 
         <QuickAccessBar />
       </div>
       <div className="pt-12">
-        <div className="sticky top-12 z-50 pt-2 pb-3 md:pt-3 md:pb-4">
+        <div className="sticky top-12 z-50">
           <Header />
         </div>
       </div>
