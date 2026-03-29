@@ -60,7 +60,7 @@ const Header: React.FC = () => {
       style={{ background: 'linear-gradient(135deg, hsl(200 90% 24%) 0%, hsl(200 85% 16%) 100%)' }}
     >
       {/* Top Bar */}
-      <div className={`hidden md:block transition-colors duration-300 ${isScrolled ? 'border-b border-border/30' : 'border-b border-white/10'}`}>
+      <div className="hidden md:block border-b border-white/10">
         <div className="container mx-auto px-6">
           <div className="flex items-center justify-between h-9 text-xs">
             <div className={`flex items-center gap-4 ${isScrolled ? 'text-muted-foreground' : 'text-white/70'}`}>
