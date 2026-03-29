@@ -19,6 +19,7 @@ const stagger = { hidden: {}, visible: { transition: { staggerChildren: 0.06 } }
 const NewsPage: React.FC = () => {
   const { t, language, isRTL } = useLanguage();
   const [activeCategory, setActiveCategory] = useState('All');
+  const [searchQuery, setSearchQuery] = useState('');
   const [expandedId, setExpandedId] = useState<number | null>(null);
 
   const categories = [
@@ -76,7 +77,12 @@ const NewsPage: React.FC = () => {
       },
     ];
 
-  const filtered = activeCategory === 'All' ? articles : articles.filter(a => a.category === activeCategory);
+  const filtered = articles.filter(a => {
+    const matchesCategory = activeCategory === 'All' || a.category === activeCategory;
+    const query = searchQuery.toLowerCase();
+    const matchesSearch = !query || a.title.toLowerCase().includes(query) || a.excerpt.toLowerCase().includes(query) || a.author.toLowerCase().includes(query);
+    return matchesCategory && matchesSearch;
+  });
 
   return (
     <PageLayout>
@@ -92,12 +98,26 @@ const NewsPage: React.FC = () => {
           </div>
         </section>
         <section className="container mx-auto px-6 py-10">
-          <div className="flex flex-wrap gap-2 justify-center mb-10">
+          {/* Search */}
+          <div className="max-w-md mx-auto mb-6">
+            <Input
+              placeholder={language === 'ar' ? 'ابحث في الأخبار...' : 'Search news...'}
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              className="rounded-[8px]"
+            />
+          </div>
+          {/* Categories */}
+          <div className="flex flex-wrap gap-2 justify-center mb-6">
             {categories.map(cat => (
               <Button key={cat.key} variant={activeCategory === cat.key ? 'default' : 'outline'} size="sm"
-                onClick={() => setActiveCategory(cat.key)} className="rounded-[8px] text-xs">{cat.label}</Button>
+                onClick={() => { setActiveCategory(cat.key); setSearchQuery(''); }} className="rounded-[8px] text-xs">{cat.label}</Button>
             ))}
           </div>
+          {/* Results count */}
+          <p className="text-center text-xs text-muted-foreground mb-8">
+            {language === 'ar' ? `عرض ${filtered.length} نتيجة` : `Showing ${filtered.length} result${filtered.length !== 1 ? 's' : ''}`}
+          </p>
           <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true }} className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 mb-20">
             {filtered.map((article) => (
               <motion.article key={article.id} variants={fadeUp} whileHover={expandedId !== article.id ? { y: -3 } : {}}
