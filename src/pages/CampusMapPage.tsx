@@ -1,3 +1,4 @@
+import QuickAccessBar from '@/components/QuickAccessBar';
 import React, { useState, useEffect, useRef, useCallback, useMemo, Suspense } from 'react';
 import { useLanguage } from '../contexts/LanguageContext';
 import { Canvas, useFrame, useThree } from '@react-three/fiber';
