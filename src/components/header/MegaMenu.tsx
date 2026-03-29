@@ -19,9 +19,9 @@ const MegaMenu: React.FC<MegaMenuProps> = ({ isOpen, onClose }) => {
     {
       title: t('nav.services'),
       items: [
-        { icon: Building2, label: t('nav.facilities'), href: '/facilities', desc: 'World-class medical facilities' },
-        { icon: Plane, label: t('nav.medicalTourism'), href: '/medical-tourism', desc: 'International patient services' },
-        { icon: FlaskConical, label: t('nav.research'), href: '/research', desc: 'Innovation & clinical trials' },
+        { icon: Building2, label: t('nav.facilities'), href: '/facilities', desc: t('mega.facilities.desc') },
+        { icon: Plane, label: t('nav.medicalTourism'), href: '/medical-tourism', desc: t('mega.medicalTourism.desc') },
+        { icon: FlaskConical, label: t('nav.research'), href: '/research', desc: t('mega.research.desc') },
       ],
     },
     {
