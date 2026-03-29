@@ -32,6 +32,24 @@ const translations: Record<Language, Record<string, string>> = {
     'nav.location': 'Location',
     'nav.faq': 'FAQ',
     'nav.patientPortal': 'Patient Portal',
+    'nav.healthcareOverview': 'Healthcare Overview',
+
+    // MegaMenu descriptions
+    'mega.corporate': 'Corporate',
+    'mega.resources': 'Resources',
+    'mega.facilities.desc': 'World-class medical facilities',
+    'mega.medicalTourism.desc': 'International patient services',
+    'mega.research.desc': 'Innovation & clinical trials',
+    'mega.partnerships.desc': 'Global collaborations',
+    'mega.devPhases.desc': 'Project milestones',
+    'mega.investment.desc': 'Investor relations',
+    'mega.healthcareOverview.desc': 'Research & market analysis',
+    'mega.patientPortal.desc': 'Access your health records',
+    'mega.insurance.desc': 'Insurance & billing info',
+    'mega.news.desc': 'Latest updates & press',
+    'mega.careers.desc': 'Join our team',
+    'mega.location.desc': 'Find us & directions',
+    'mega.faq.desc': 'Frequently asked questions',
 
     // Hero
     'hero.title': 'CAPITALMED',
