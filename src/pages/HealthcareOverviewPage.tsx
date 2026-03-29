@@ -356,7 +356,7 @@ const HealthcareOverviewPage: React.FC = () => {
         </div>
 
         {/* Overseas Care & Top Hospitals */}
-        <div className="grid md:grid-cols-2 gap-8 mb-16">
+        <div className="grid md:grid-cols-2 gap-10 mb-20">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="premium-card p-6">
             <h4 className="font-semibold text-sm mb-4 text-center">{t('healthcare.chart.overseas')}</h4>
             <ResponsiveContainer width="100%" height={250}>
