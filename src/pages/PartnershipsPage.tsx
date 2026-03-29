@@ -28,7 +28,42 @@ const brandEntities = [
 ];
 
 const PartnershipsPage: React.FC = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
+
+  const brandEntities = language === 'ar' ? [
+    { name: 'القلعة فينتشرز', desc: 'مجموعة صناعات في الصحة والتعليم والاستثمار، بقيادة د. حسن القلعة', icon: Building2 },
+    { name: 'جامعة بدر بالقاهرة', desc: 'جامعة رائدة تقدم التعليم الطبي والرعاية الصحية', icon: GraduationCap },
+    { name: 'سيرا', desc: 'القاهرة للاستثمار والتطوير العقاري ش.م.م.', icon: Building2 },
+    { name: 'EHCS', desc: 'المصريون لخدمات الرعاية الصحية — الشركة المالكة لكابيتال ميد', icon: Stethoscope },
+    { name: 'كابيتال ميد', desc: 'عاصمة الطب في الشرق الأوسط — المدينة الطبية', icon: Stethoscope },
+  ] : [
+    { name: 'ElKalaa Ventures', desc: 'A group of industries in health, education, and investment, headed by Dr. Hassan Al-Kalla', icon: Building2 },
+    { name: 'BUC — Badr University in Cairo', desc: 'Premier university offering medical and healthcare education', icon: GraduationCap },
+    { name: 'CIRA', desc: 'Cairo for Investment and Real Estate Development S.A.E.', icon: Building2 },
+    { name: 'EHCS', desc: 'Egyptians for Health Care Services — The company that owns CAPITALMED', icon: Stethoscope },
+    { name: 'CAPITALMED', desc: 'The Capital of Medicine in the Middle East — Healthcare City', icon: Stethoscope },
+  ];
+
+  const partners = language === 'ar' ? [
+    { name: 'جونز هوبكنز للطب', country: 'الولايات المتحدة', type: 'أكاديمي', focus: 'البحث الطبي', key: true },
+    { name: 'مركز القلب الألماني', country: 'ألمانيا', type: 'سريري', focus: 'أمراض القلب', key: true },
+    { name: 'مايو كلينك', country: 'الولايات المتحدة', type: 'بحثي', focus: 'متعدد التخصصات', key: true },
+    { name: 'مؤسسة NHS', country: 'المملكة المتحدة', type: 'رعاية صحية', focus: 'الصحة العامة', key: false },
+    { name: 'شاريتيه برلين', country: 'ألمانيا', type: 'أكاديمي', focus: 'التعليم الطبي', key: false },
+    { name: 'مستشفى سنغافورة العام', country: 'سنغافورة', type: 'سريري', focus: 'متعدد التخصصات', key: false },
+    { name: 'كليفلاند كلينك', country: 'الولايات المتحدة', type: 'سريري', focus: 'رعاية القلب', key: false },
+    { name: 'معهد كارولينسكا', country: 'السويد', type: 'بحثي', focus: 'البحث', key: false },
+  ] : [
+    { name: 'Johns Hopkins Medicine', country: 'USA', type: 'Academic', focus: 'Medical Research', key: true },
+    { name: 'German Heart Center', country: 'Germany', type: 'Clinical', focus: 'Cardiology', key: true },
+    { name: 'Mayo Clinic', country: 'USA', type: 'Research', focus: 'Multi-specialty', key: true },
+    { name: 'NHS Foundation Trust', country: 'UK', type: 'Healthcare', focus: 'Public Health', key: false },
+    { name: 'Charité Berlin', country: 'Germany', type: 'Academic', focus: 'Medical Education', key: false },
+    { name: 'Singapore General Hospital', country: 'Singapore', type: 'Clinical', focus: 'Multi-specialty', key: false },
+    { name: 'Cleveland Clinic', country: 'USA', type: 'Clinical', focus: 'Heart Care', key: false },
+    { name: 'Karolinska Institute', country: 'Sweden', type: 'Research', focus: 'Research', key: false },
+  ];
+
   const areas = [
     { icon: Stethoscope, title: t('partnerships.areas.clinical'), desc: t('partnerships.areas.clinical.desc') },
     { icon: Microscope, title: t('partnerships.areas.research'), desc: t('partnerships.areas.research.desc') },
