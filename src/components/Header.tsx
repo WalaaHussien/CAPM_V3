@@ -119,7 +119,7 @@ const Header: React.FC = () => {
                   <p className={`text-[8px] font-semibold tracking-[0.2em] uppercase leading-none mb-0.5 ${isScrolled ? 'text-muted-foreground' : 'text-white/50'}`}>
                     {language === 'ar' ? 'مستشفى تابع لكابيتال ميد' : language === 'fr' ? 'Un Hôpital CAPITALMED' : 'A CAPITALMED Hospital'}
                   </p>
-                  <p className={`text-sm font-bold tracking-[0.12em] uppercase leading-none ${isScrolled ? 'text-foreground' : 'text-white'}`}>
+                  <p className={`font-brand text-base font-bold tracking-[0.15em] uppercase leading-none ${isScrolled ? 'text-foreground' : 'text-white'}`}>
                     {language === 'ar' ? 'لا بلازا' : 'LA PLAZA'}
                   </p>
                 </div>

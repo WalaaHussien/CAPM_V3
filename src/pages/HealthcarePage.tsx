@@ -14,8 +14,8 @@ const stagger = { hidden: {}, visible: { transition: { staggerChildren: 0.08 } }
 const fadeUp = { hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0, transition: { duration: 0.5 } } };
 
 const COLORS = [
-  'hsl(200, 90%, 30%)', 'hsl(160, 60%, 40%)', 'hsl(30, 80%, 55%)',
-  'hsl(350, 65%, 50%)', 'hsl(260, 50%, 55%)', 'hsl(200, 60%, 50%)',
+  'hsl(224, 65%, 38%)', 'hsl(160, 60%, 40%)', 'hsl(27, 85%, 55%)',
+  'hsl(350, 65%, 50%)', 'hsl(260, 50%, 55%)', 'hsl(199, 85%, 50%)',
   'hsl(120, 40%, 45%)', 'hsl(45, 70%, 50%)'
 ];
 
@@ -135,7 +135,7 @@ const HealthcarePage: React.FC = () => {
       </section>
 
       {/* CAPITALMED Differentiation */}
-      <section className="py-16 bg-[hsl(200,90%,14%)]">
+      <section className="py-16 bg-[hsl(224,68%,18%)]">
         <div className="container mx-auto px-6 max-w-4xl text-center">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
             <h2 className="text-3xl font-bold text-white mb-3">
@@ -185,7 +185,7 @@ const HealthcarePage: React.FC = () => {
                   <XAxis dataKey="country" tick={{ fontSize: 11 }} />
                   <YAxis tick={{ fontSize: 11 }} />
                   <Tooltip />
-                  <Bar dataKey="spending" fill="hsl(200, 90%, 30%)" radius={[4, 4, 0, 0]} />
+                  <Bar dataKey="spending" fill="hsl(224, 65%, 38%)" radius={[4, 4, 0, 0]} />
                 </BarChart>
               </ResponsiveContainer>
             </motion.div>
@@ -264,7 +264,7 @@ const HealthcarePage: React.FC = () => {
                   <XAxis type="number" domain={[0, 100]} tick={{ fontSize: 11 }} />
                   <YAxis dataKey="hospital" type="category" width={110} tick={{ fontSize: 10 }} />
                   <Tooltip />
-                  <Bar dataKey="score" fill="hsl(200, 60%, 50%)" radius={[0, 4, 4, 0]} />
+                  <Bar dataKey="score" fill="hsl(199, 85%, 50%)" radius={[0, 4, 4, 0]} />
                 </BarChart>
               </ResponsiveContainer>
             </motion.div>
@@ -280,7 +280,7 @@ const HealthcarePage: React.FC = () => {
                 <PolarAngleAxis dataKey="metric" tick={{ fontSize: 10 }} />
                 <PolarRadiusAxis domain={[0, 100]} tick={{ fontSize: 10 }} />
                 <Radar name={isAr ? 'المعيار الحالي' : 'Current Standard'} dataKey="current" stroke="hsl(350, 65%, 50%)" fill="hsl(350, 65%, 50%)" fillOpacity={0.2} />
-                <Radar name="CAPITALMED" dataKey="capitalmed" stroke="hsl(200, 90%, 30%)" fill="hsl(200, 90%, 30%)" fillOpacity={0.3} />
+                <Radar name="CAPITALMED" dataKey="capitalmed" stroke="hsl(224, 65%, 38%)" fill="hsl(224, 65%, 38%)" fillOpacity={0.3} />
                 <Legend wrapperStyle={{ direction: isAr ? 'rtl' : 'ltr' }} />
                 <Tooltip />
               </RadarChart>
@@ -293,7 +293,7 @@ const HealthcarePage: React.FC = () => {
       <section className="py-20">
         <div className="container mx-auto px-6">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
-            className="bg-[hsl(200,90%,14%)] rounded-xl p-10 md:p-14 text-center">
+            className="bg-[hsl(224,68%,18%)] rounded-xl p-10 md:p-14 text-center">
             <h2 className="text-3xl font-bold text-white mb-3">
               {isAr ? 'كابيتال ميد: أمل جديد للرعاية الصحية' : 'CAPITALMED: A New Hope for Healthcare'}
             </h2>

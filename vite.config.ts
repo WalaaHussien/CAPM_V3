@@ -5,7 +5,7 @@ import path from "path";
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: "/-Cap_Med/",
+  base: "/CAPMED_V2/",
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),

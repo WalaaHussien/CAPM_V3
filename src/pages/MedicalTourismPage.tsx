@@ -101,11 +101,11 @@ const MedicalTourismPage: React.FC = () => {
 
   return (
     <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="min-h-screen bg-background">
-      
+
       <main>
         {/* Hero - Parallax */}
         <section ref={heroRef} className="relative min-h-[85vh] flex items-center overflow-hidden">
-          <motion.div style={{ y: heroY }} className="absolute inset-0 bg-gradient-to-br from-[hsl(200,90%,16%)] via-[hsl(200,85%,12%)] to-[hsl(210,80%,8%)]" />
+          <motion.div style={{ y: heroY }} className="absolute inset-0 bg-gradient-to-br from-[hsl(224,70%,20%)] via-[hsl(224,72%,13%)] to-[hsl(224,72%,8%)]" />
           {/* Animated background elements */}
           <div className="absolute inset-0 overflow-hidden">
             <motion.div animate={{ scale: [1, 1.2, 1], opacity: [0.1, 0.2, 0.1] }} transition={{ duration: 8, repeat: Infinity }}
@@ -316,7 +316,7 @@ const MedicalTourismPage: React.FC = () => {
         </section>
 
         {/* IV. Advanced Differentiation - Overlapping cards */}
-        <section className="py-24 bg-gradient-to-br from-[hsl(200,90%,16%)] via-[hsl(200,85%,12%)] to-[hsl(210,80%,8%)] relative overflow-hidden">
+        <section className="py-24 bg-gradient-to-br from-[hsl(224,70%,20%)] via-[hsl(224,72%,14%)] to-[hsl(224,72%,9%)] relative overflow-hidden">
           <div className="absolute inset-0">
             <motion.div animate={{ rotate: 360 }} transition={{ duration: 60, repeat: Infinity, ease: 'linear' }}
               className="absolute -top-40 -right-40 w-[600px] h-[600px] border border-white/5 rounded-full" />
@@ -448,7 +448,7 @@ const MedicalTourismPage: React.FC = () => {
         <section className="py-24">
           <div className="container mx-auto px-6">
             <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
-              className="relative bg-gradient-to-br from-[hsl(200,90%,18%)] via-[hsl(200,85%,14%)] to-[hsl(210,80%,10%)] rounded-3xl p-12 md:p-16 text-center overflow-hidden">
+              className="relative bg-gradient-to-br from-[hsl(224,68%,22%)] via-[hsl(224,70%,16%)] to-[hsl(224,72%,11%)] rounded-3xl p-12 md:p-16 text-center overflow-hidden">
               <div className="absolute inset-0 overflow-hidden">
                 <motion.div animate={{ scale: [1, 1.3, 1] }} transition={{ duration: 10, repeat: Infinity }}
                   className="absolute -top-20 -right-20 w-96 h-96 bg-secondary/10 rounded-full blur-[80px]" />
@@ -478,7 +478,7 @@ const MedicalTourismPage: React.FC = () => {
           </div>
         </section>
       </main>
-      
+
     </motion.div>
   );
 };

@@ -53,8 +53,8 @@ const Hero: React.FC = () => {
             transition={{ duration: 1.5, ease: 'easeInOut' }}
           />
         ))}
-        <div className="absolute inset-0 bg-gradient-to-r from-[hsl(200,90%,8%)]/60 via-[hsl(200,85%,10%)]/40 to-[hsl(200,80%,12%)]/20" />
-        <div className="absolute inset-0 bg-gradient-to-t from-[hsl(200,85%,8%)]/30 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[hsl(224,72%,10%)]/65 via-[hsl(224,68%,13%)]/45 to-[hsl(220,60%,16%)]/20" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[hsl(224,70%,10%)]/35 to-transparent" />
       </div>
 
       {/* Content */}
@@ -73,7 +73,7 @@ const Hero: React.FC = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.7, delay: 0.1 }}
-            className="mb-4 text-4xl font-bold leading-[1.05] tracking-[-0.02em] text-white drop-shadow-[0_2px_10px_rgba(0,0,0,0.5)] sm:mb-5 sm:text-5xl md:text-6xl lg:text-7xl"
+            className="mb-4 font-brand text-4xl font-bold leading-[1.05] tracking-[-0.02em] text-white drop-shadow-[0_2px_10px_rgba(0,0,0,0.5)] sm:mb-5 sm:text-5xl md:text-6xl lg:text-7xl"
           >
             {t('hero.title')}
           </motion.h1>

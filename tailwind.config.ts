@@ -14,8 +14,9 @@ export default {
     },
     extend: {
       fontFamily: {
-        sans: ['"Modern King"', 'Montserrat', '"Noto Sans Arabic"', 'system-ui', 'sans-serif'],
-        arabic: ['"Modern King"', '"Noto Sans Arabic"', 'Montserrat', 'sans-serif'],
+        sans: ['Montserrat', '"Noto Sans Arabic"', 'system-ui', 'sans-serif'],
+        arabic: ['"Noto Sans Arabic"', 'Montserrat', 'sans-serif'],
+        brand: ['"Modern KING"', 'Montserrat', '"Noto Sans Arabic"', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",

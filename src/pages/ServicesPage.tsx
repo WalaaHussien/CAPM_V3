@@ -40,7 +40,7 @@ const ServicesPage: React.FC = () => {
 
   return (
     <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="min-h-screen bg-background">
-      
+
 
       {/* Hero with staggered animations */}
       <section className="page-hero">
@@ -91,7 +91,7 @@ const ServicesPage: React.FC = () => {
       </section>
 
       {/* Emergency - Dark neutral background with red accents */}
-      <section className="py-20 bg-[hsl(200,90%,14%)]">
+      <section className="py-20 bg-[hsl(224,68%,18%)]">
         <div className="container mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
@@ -127,7 +127,7 @@ const ServicesPage: React.FC = () => {
       <section className="py-20">
         <div className="container mx-auto px-6">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
-            className="bg-[hsl(200,90%,14%)] rounded-xl p-10 md:p-14 text-center">
+            className="bg-[hsl(224,68%,18%)] rounded-xl p-10 md:p-14 text-center">
             <h2 className="text-3xl font-bold text-white mb-3">{t('services.cta.title')}</h2>
             <p className="text-white/60 mb-8 max-w-xl mx-auto">{t('services.cta.subtitle')}</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -144,7 +144,7 @@ const ServicesPage: React.FC = () => {
         </div>
       </section>
 
-      
+
     </motion.div>
   );
 };

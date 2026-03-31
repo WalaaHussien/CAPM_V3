@@ -59,7 +59,7 @@ const Stats: React.FC = () => {
   };
 
   return (
-    <section className="py-20 bg-gradient-to-br from-[hsl(200,90%,18%)] via-[hsl(200,85%,14%)] to-[hsl(200,80%,10%)] relative overflow-hidden">
+    <section className="py-20 bg-gradient-to-br from-[hsl(224,68%,22%)] via-[hsl(224,70%,16%)] to-[hsl(224,72%,11%)] relative overflow-hidden">
       {/* Decorative background elements */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-secondary rounded-full blur-[120px]" />
