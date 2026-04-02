@@ -222,8 +222,8 @@ const DoctorsPage: React.FC = () => {
             {teamHighlights.map((stat, i) => (
               <motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }}
                 className="premium-card text-center p-6">
-                <stat.icon className="w-8 h-8 text-primary mx-auto mb-3" />
-                <div className="text-3xl md:text-4xl font-bold text-primary mb-2">{stat.value}</div>
+                <stat.icon className="w-8 h-8 text-accent mx-auto mb-3" />
+                <div className="text-3xl md:text-4xl font-bold text-accent mb-2">{stat.value}</div>
                 <div className="text-muted-foreground text-sm">{txt(stat.labelEn, stat.labelAr, stat.labelFr)}</div>
               </motion.div>
             ))}
@@ -284,7 +284,7 @@ const DoctorsPage: React.FC = () => {
                       ))}
                     </div>
                     <div className="flex items-center gap-1.5 text-xs text-muted-foreground border-t border-border pt-3">
-                      <GraduationCap className="w-3.5 h-3.5 text-primary" />
+                      <GraduationCap className="w-3.5 h-3.5 text-accent" />
                       <span>{spec.fellowships} {txt('international fellowships', 'زمالة دولية', 'bourses internationales')}</span>
                     </div>
                   </div>
@@ -315,8 +315,8 @@ const DoctorsPage: React.FC = () => {
             ].map((item, i) => (
               <motion.div key={i} initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }}
                 className="flex flex-col items-center gap-2 min-w-[120px] text-center">
-                <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
-                  <item.icon className="w-5 h-5 text-primary" />
+                <div className="w-10 h-10 rounded-full bg-accent/10 flex items-center justify-center">
+                  <item.icon className="w-5 h-5 text-accent" />
                 </div>
                 <span className="text-xs font-medium">{txt(item.en, item.ar, item.fr)}</span>
               </motion.div>
@@ -329,7 +329,7 @@ const DoctorsPage: React.FC = () => {
       <section className="py-16">
         <div className="container mx-auto px-6">
           <div className="premium-card p-8 md:p-12 text-center max-w-3xl mx-auto">
-            <Stethoscope className="w-12 h-12 text-primary mx-auto mb-4" />
+            <Stethoscope className="w-12 h-12 text-accent mx-auto mb-4" />
             <h2 className="text-2xl font-bold mb-3">
               {txt('Need Help Finding the Right Specialty?', 'تحتاج مساعدة في اختيار التخصص المناسب؟', 'Besoin d\'aide pour trouver la bonne spécialité ?')}
             </h2>
