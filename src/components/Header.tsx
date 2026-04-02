@@ -63,7 +63,7 @@ const Header: React.FC = () => {
   const useDark = isScrolled || isReadingMode;
   const textColor = useDark
     ? 'text-foreground'
-    : 'text-white drop-shadow-[0_1px_4px_rgba(0,0,0,0.5)]';
+    : 'text-white drop-shadow-[0_1px_3px_rgba(0,0,0,0.3)]';
   const hoverColor = useDark ? 'hover:text-foreground/70' : 'hover:text-white/70';
   const headerClasses = [
     'site-header fixed inset-x-0 top-0 z-50 transition-all duration-300',
