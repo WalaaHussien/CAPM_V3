@@ -15,14 +15,14 @@
     --header-height: 7.75rem;
     --section-space: clamp(4rem, 7vw, 6rem);
 
-    /* Primary Blue #1D3987 */
-    --primary: 224 63% 33%; /* #1D3987 in HSL */
+    /* Primary Blue #00B4E6 (Footer Color) */
+    --primary: 193 100% 45%; /* #00B4E6 in HSL */
     --primary-foreground: 0 0% 100%;
-    --primary-light: 224 63% 80%; /* lighter version of #1D3987 */
-    --primary-dark: 224 63% 20%; /* darker version of #1D3987 */
+    --primary-light: 193 100% 80%; /* lighter version of #00B4E6 */
+    --primary-dark: 193 100% 34%; /* darker version of #00B4E6 */
 
     /* Secondary — Dark Primary */
-    --secondary: 224 63% 20%;
+    --secondary: 193 100% 34%;
     --secondary-foreground: 0 0% 100%;
 
     /* Pure white background */
@@ -49,13 +49,13 @@
 
     --border: 224 18% 88%;
     --input: 224 18% 86%;
-    --ring: 224 63% 33%;
+    --ring: 193 100% 45%;
 
     --radius: 0.5rem;
 
     /* Gradients — cyan primary */
     --gradient-hero: linear-gradient(135deg, hsl(193 100% 33%) 0%, hsl(193 100% 24%) 50%, hsl(193 90% 16%) 100%);
-    --gradient-primary: linear-gradient(135deg, hsl(224 63% 33%) 0%, hsl(224 63% 20%) 100%);
+    --gradient-primary: linear-gradient(135deg, hsl(193 100% 45%) 0%, hsl(193 100% 34%) 100%);
     --gradient-secondary: linear-gradient(135deg, hsl(193 100% 38%) 0%, hsl(193 100% 26%) 100%);
     --gradient-light: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(193 58% 96%) 100%);
 
@@ -68,7 +68,7 @@
     /* Sidebar */
     --sidebar-background: 0 0% 100%;
     --sidebar-foreground: 0 0% 10%;
-    --sidebar-primary: 224 63% 33%;
+    --sidebar-primary: 193 100% 45%;
     --sidebar-primary-foreground: 0 0% 100%;
     --sidebar-accent: 193 58% 94%;
     --sidebar-accent-foreground: 0 0% 10%;
@@ -86,10 +86,10 @@
     --popover: 224 40% 11%;
     --popover-foreground: 220 20% 95%;
 
-    --primary: 224 63% 33%;
+    --primary: 193 100% 45%;
     --primary-foreground: 0 0% 100%;
-    --primary-light: 224 63% 80%;
-    --primary-dark: 224 63% 20%;
+    --primary-light: 193 100% 80%;
+    --primary-dark: 193 100% 34%;
 
     --secondary: 193 100% 40%;
     --secondary-foreground: 0 0% 100%;
@@ -105,11 +105,11 @@
 
     --border: 224 30% 18%;
     --input: 224 30% 18%;
-    --ring: 224 63% 33%;
+    --ring: 193 100% 45%;
 
     --sidebar-background: 224 45% 7%;
     --sidebar-foreground: 220 20% 90%;
-    --sidebar-primary: 224 63% 33%;
+    --sidebar-primary: 193 100% 45%;
     --sidebar-primary-foreground: 0 0% 100%;
     --sidebar-accent: 224 30% 13%;
     --sidebar-accent-foreground: 220 20% 90%;
@@ -168,8 +168,9 @@
   }
 
   /* RTL Support */
-  [dir="rtl"] {
+  [dir="rtl"], [dir="rtl"] * {
     font-family: var(--font-body);
+    letter-spacing: 0 !important;
   }
 
   [dir="ltr"] {
@@ -249,7 +250,7 @@
   /* Premium Page Hero with wave divider */
   .page-hero {
     @apply relative overflow-hidden pb-20 pt-44 md:pb-24 md:pt-48;
-    background: linear-gradient(180deg, #1D3987 0%, #16285C 100%);
+    background: linear-gradient(180deg, #00B4E6 0%, #0088AD 100%);
   }
 
   .page-hero h1,
@@ -471,7 +472,7 @@ html.high-contrast {
   --muted-foreground: 0 0% 85%;
   --border: 0 0% 40%;
   --input: 0 0% 20%;
-  --primary: 224 63% 33%;
+  --primary: 193 100% 45%;
   --primary-foreground: 0 0% 0%;
   --secondary: 193 100% 55%;
   --secondary-foreground: 0 0% 0%;
