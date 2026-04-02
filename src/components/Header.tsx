@@ -19,6 +19,7 @@ const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isMegaMenuOpen, setIsMegaMenuOpen] = useState(false);
+  const [isReadingMode, setIsReadingMode] = useState(false);
   const location = useLocation();
   const megaMenuTimeout = useRef<ReturnType<typeof setTimeout>>();
 
@@ -26,6 +27,15 @@ const Header: React.FC = () => {
     const handleScroll = () => setIsScrolled(window.scrollY > 50);
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  useEffect(() => {
+    const observer = new MutationObserver(() => {
+      setIsReadingMode(document.documentElement.classList.contains('reading-mode'));
+    });
+    observer.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
+    setIsReadingMode(document.documentElement.classList.contains('reading-mode'));
+    return () => observer.disconnect();
   }, []);
 
   useEffect(() => {
@@ -50,10 +60,11 @@ const Header: React.FC = () => {
     megaMenuTimeout.current = setTimeout(() => setIsMegaMenuOpen(false), 200);
   };
 
-  const textColor = isScrolled
+  const useDark = isScrolled || isReadingMode;
+  const textColor = useDark
     ? 'text-foreground'
     : 'text-white drop-shadow-[0_1px_3px_rgba(0,0,0,0.3)]';
-  const hoverColor = isScrolled ? 'hover:text-foreground/70' : 'hover:text-white/70';
+  const hoverColor = useDark ? 'hover:text-foreground/70' : 'hover:text-white/70';
   const headerClasses = [
     'site-header fixed inset-x-0 top-0 z-50 transition-all duration-300',
     isScrolled ? 'site-header--scrolled' : 'site-header--top',
@@ -67,7 +78,7 @@ const Header: React.FC = () => {
       className={headerClasses}
     >
       {/* Hotline + Top Bar */}
-      <div className={`border-b ${isScrolled ? 'border-border/20' : 'border-white/10'}`}>
+      <div className={`border-b ${useDark ? 'border-border/20' : 'border-white/10'}`}>
         <div className="container">
           <div className="header-utility-bar text-xs">
             <div className="header-utility-bar__language">
@@ -87,12 +98,12 @@ const Header: React.FC = () => {
               </DropdownMenu>
             </div>
 
-            <a href="tel:16999" className={`header-utility-bar__phone font-bold transition-colors ${isScrolled ? 'text-foreground hover:text-accent' : 'text-white hover:text-accent'}`}>
+            <a href="tel:16999" className={`header-utility-bar__phone font-bold transition-colors ${useDark ? 'text-foreground hover:text-accent' : 'text-white hover:text-accent'}`}>
               <div className="flex h-6 w-6 items-center justify-center rounded-full bg-destructive/20">
                 <Phone className="w-3 h-3 text-destructive animate-pulse" />
               </div>
               <span className="text-destructive font-bold text-sm">16999</span>
-              <span className={`${isScrolled ? 'text-muted-foreground' : 'text-white/50'} font-normal hidden sm:inline`}>24/7</span>
+              <span className={`${useDark ? 'text-muted-foreground' : 'text-white/50'} font-normal hidden sm:inline`}>24/7</span>
             </a>
           </div>
         </div>
@@ -105,21 +116,21 @@ const Header: React.FC = () => {
           <div className="flex shrink-0 items-center gap-3">
             <Link to="/" className="flex items-center relative h-14 md:h-[4.5rem]">
               <img
-                src={isScrolled ? darkLogo : lightLogo}
+                src={useDark ? darkLogo : lightLogo}
                 alt="CapitalMed"
-                className={`h-full w-auto object-contain transition-all duration-300 ${!isScrolled ? 'drop-shadow-[0_2px_8px_rgba(0,0,0,0.45)]' : ''}`}
+                className={`h-full w-auto object-contain transition-all duration-300 ${!useDark ? 'drop-shadow-[0_2px_8px_rgba(0,0,0,0.45)]' : ''}`}
               />
             </Link>
 
             {/* La Plaza sub-brand — shown only on /laplaza */}
             {location.pathname === '/laplaza' && (
               <div className={`flex items-center gap-2.5 ${isRTL ? 'flex-row-reverse' : ''}`}>
-                <div className={`h-8 w-px ${isScrolled ? 'bg-border' : 'bg-white/25'}`} />
+                <div className={`h-8 w-px ${useDark ? 'bg-border' : 'bg-white/25'}`} />
                 <div className={isRTL ? 'text-right' : 'text-left'}>
-                  <p className={`text-[8px] font-semibold tracking-[0.2em] uppercase leading-none mb-0.5 ${isScrolled ? 'text-muted-foreground' : 'text-white/50'}`}>
+                  <p className={`text-[8px] font-semibold tracking-[0.2em] uppercase leading-none mb-0.5 ${useDark ? 'text-muted-foreground' : 'text-white/50'}`}>
                     {language === 'ar' ? 'مستشفى تابع لكابيتال ميد' : language === 'fr' ? 'Un Hôpital CAPITALMED' : 'A CAPITALMED Hospital'}
                   </p>
-                  <p className={`font-brand text-base font-bold tracking-[0.15em] uppercase leading-none ${isScrolled ? 'text-foreground' : 'text-white'}`}>
+                  <p className={`font-brand text-base font-bold tracking-[0.15em] uppercase leading-none ${useDark ? 'text-foreground' : 'text-white'}`}>
                     {language === 'ar' ? 'لا بلازا' : 'LA PLAZA'}
                   </p>
                 </div>
