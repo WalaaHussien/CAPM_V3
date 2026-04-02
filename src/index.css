@@ -237,7 +237,7 @@
   }
 
   .site-header--top {
-    background: transparent;
+    background: linear-gradient(180deg, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0.1) 70%, transparent 100%);
     box-shadow: none;
   }
 
